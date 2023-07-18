@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <div id="main">
+        <table>
+            <tr>
+                <th id="rangeMessage">The number is between <span id="lowerBoundary">-</span> and <span
+                        id="upperBoundary">-</span></th>
+            </tr>
+            <tr>
+                <th>Your guess is</th>
+            </tr>
+            <tr>
+                <td><input type="text"
+                        onkeypress='return (event.charCode >= 48 && event.charCode <= 57) || event.charCode == 45'
+                        id="userGuess" maxlength="3" /></td>
+            </tr>
+            <tr>
+                <th>Number of guess you made: <span id="numberOfGuess">-</span></th>
+            </tr>
+            <tr>
+                <th>Number of remaining guess: <span id="numberOfRemainingGuess"></span></th>
+            </tr>
+            <tr>
+                <th>Probability of finding number(%): <span id="findingProbability">-</span></th>
+            </tr>
+            <tr>
+                <th id="upDownMessage"></th>
+            </tr>
+            <tr>
+                <th id="hintMessage"></th>
+            </tr>
+            <tr>
+                <td><input type="button" value="Make A Guess" onclick="checkGuess();" /></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
